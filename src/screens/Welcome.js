@@ -37,7 +37,7 @@ export default function Welcome() {
               paddingVertical: 15,
               paddingHorizontal: 20,
               borderRadius: 20,
-              backgroundColor: Colors.secondary,
+              backgroundColor: Colors.dark,
             }}
           >
             <Text
