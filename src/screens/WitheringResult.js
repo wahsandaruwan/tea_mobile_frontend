@@ -97,7 +97,7 @@ export default function WitheringResult({ navigation }) {
                 textAlign: "center",
               }}
             >
-              of the Tea leaves sample.
+              of captured Tea leaves sample.
             </Text>
           </View>
         </ImageBackground>
