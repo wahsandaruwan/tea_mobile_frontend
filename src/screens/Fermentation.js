@@ -83,10 +83,7 @@ export default function Fermentation({ navigation }) {
                 paddingHorizontal: 30,
                 borderRadius: 30,
               }}
-              onPress={() => {
-                navigation.navigate("FermentationTime");
-                setFerState(true);
-              }}
+              onPress={() => navigation.navigate("FermentationTime")}
             >
               <Text
                 style={{
