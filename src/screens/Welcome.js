@@ -6,7 +6,7 @@ import { StatusBar } from "expo-status-bar";
 // ---------Constants---------
 import { Colors, Images } from "../constants";
 
-export default function Welcome() {
+export default function Welcome({ navigation }) {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: Colors.ternary }}>
       <StatusBar style="dark" />
@@ -39,6 +39,7 @@ export default function Welcome() {
               borderRadius: 20,
               backgroundColor: Colors.dark,
             }}
+            onPress={() => navigation.navigate("Login")}
           >
             <Text
               style={{

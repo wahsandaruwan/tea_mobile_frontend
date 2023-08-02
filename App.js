@@ -1,5 +1,5 @@
-import { Welcome } from "./src/screens";
+import MainNavigation from "./src/navigations/MainNavigation";
 
 export default function App() {
-  return <Welcome />;
+  return <MainNavigation />;
 }
