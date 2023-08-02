@@ -43,8 +43,31 @@ export default function Withering({ navigation }) {
             alignItems: "center",
             width: "100%",
             height: "90%",
+            position: "relative",
           }}
         >
+          <View
+            style={{
+              width: "100%",
+              justifyContent: "center",
+              alignItems: "flex-end",
+              position: "absolute",
+              top: "5%",
+              right: 0,
+            }}
+          >
+            <TouchableOpacity
+              style={{
+                backgroundColor: Colors.dark,
+                padding: 10,
+                borderRadius: 50,
+                marginRight: 10,
+              }}
+              onPress={() => navigation.navigate("InnerNav")}
+            >
+              <Icons.PowerIcon size="20" color={Colors.light} />
+            </TouchableOpacity>
+          </View>
           <View
             style={{
               justifyContent: "center",

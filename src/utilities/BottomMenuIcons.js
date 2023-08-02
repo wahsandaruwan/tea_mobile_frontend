@@ -12,15 +12,19 @@ export default function BottomMenuIcons(route, focused) {
   let icon;
   if (route.name == "Withering") {
     icon = focused ? (
-      <SolidIcons.HomeIcon size="30" color={Colors.light} />
+      <SolidIcons.Squares2X2Icon size="30" color={Colors.light} />
     ) : (
-      <OutIcons.HomeIcon size="30" strokeWidth={2} color={Colors.dark} />
+      <OutIcons.Squares2X2Icon size="30" strokeWidth={2} color={Colors.dark} />
     );
   } else if (route.name == "Fermentation") {
     icon = focused ? (
-      <SolidIcons.ShoppingBagIcon size="30" color={Colors.light} />
+      <SolidIcons.Square3Stack3DIcon size="30" color={Colors.light} />
     ) : (
-      <OutIcons.ShoppingBagIcon size="30" strokeWidth={2} color={Colors.dark} />
+      <OutIcons.Square3Stack3DIcon
+        size="30"
+        strokeWidth={2}
+        color={Colors.dark}
+      />
     );
   }
   let btnCls = focused ? Colors.dark : "";
@@ -29,7 +33,7 @@ export default function BottomMenuIcons(route, focused) {
       style={{
         backgroundColor: btnCls,
         alignItems: "center",
-        borderRadius: 10,
+        borderRadius: 30,
         padding: 10,
       }}
     >
