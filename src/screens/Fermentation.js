@@ -8,6 +8,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { StatusBar } from "expo-status-bar";
+import { useState } from "react";
 
 // ---------Third-party components & modules---------
 import * as Icons from "react-native-heroicons/solid";
@@ -16,6 +17,9 @@ import * as Icons from "react-native-heroicons/solid";
 import { Colors, Images } from "../constants";
 
 export default function Fermentation({ navigation }) {
+  // Fermentation start state
+  const [ferState, setFerState] = useState(false);
+
   return (
     <ScrollView
       contentContainerStyle={{
@@ -83,7 +87,10 @@ export default function Fermentation({ navigation }) {
                 paddingHorizontal: 30,
                 borderRadius: 30,
               }}
-              onPress={() => navigation.navigate("InnerNav")}
+              onPress={() => {
+                navigation.navigate("FermentationTime");
+                setFerState(true);
+              }}
             >
               <Text
                 style={{
@@ -92,9 +99,31 @@ export default function Fermentation({ navigation }) {
                   textAlign: "center",
                 }}
               >
-                Fermentation
+                Fermentation Time
               </Text>
             </TouchableOpacity>
+            {ferState ? (
+              <TouchableOpacity
+                style={{
+                  backgroundColor: Colors.orange,
+                  paddingVertical: 15,
+                  paddingHorizontal: 30,
+                  borderRadius: 30,
+                  marginTop: 10,
+                }}
+                onPress={() => navigation.navigate("InnerNav")}
+              >
+                <Text
+                  style={{
+                    color: Colors.dark,
+                    fontSize: 14,
+                    textAlign: "center",
+                  }}
+                >
+                  Fermentation Value
+                </Text>
+              </TouchableOpacity>
+            ) : null}
           </View>
         </ImageBackground>
       </SafeAreaView>
