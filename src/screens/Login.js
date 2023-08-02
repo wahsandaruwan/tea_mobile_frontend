@@ -1,13 +1,16 @@
+// ---------Inbuilt components & modules---------
 import {
   SafeAreaView,
   ScrollView,
   View,
-  Image,
   Text,
   TextInput,
   TouchableOpacity,
 } from "react-native";
 import { StatusBar } from "expo-status-bar";
+
+// ---------Third-party components & modules---------
+import * as Icons from "react-native-heroicons/solid";
 
 // ---------Constants---------
 import { Colors, Images } from "../constants";
@@ -20,21 +23,89 @@ export default function Login() {
         alignItems: "center",
         justifyContent: "center",
       }}
-      style={{ display: "flex", backgroundColor: Colors.secondary }}
+      style={{ display: "flex", backgroundColor: Colors.ternary }}
       showsVerticalScrollIndicator={false}
     >
       <StatusBar style="dark" />
       <SafeAreaView
-        style={{ display: "flex", width: "100%", justifyContent: "flex-end" }}
+        style={{
+          display: "flex",
+          width: "100%",
+          justifyContent: "flex-end",
+        }}
       >
         <View
           style={{
             flexDirection: "row",
             justifyContent: "center",
-            marginBottom: 10,
+            alignItems: "center",
+            marginBottom: 15,
           }}
         >
-          <Image source={Images.login} style={{ width: 170, height: 170 }} />
+          <Icons.UserGroupIcon size="45" color={Colors.secondary} />
+          <Text
+            style={{
+              fontSize: 30,
+              color: Colors.secondary,
+              fontWeight: "bold",
+              marginLeft: 5,
+            }}
+          >
+            Login
+          </Text>
+        </View>
+        <View
+          style={{
+            justifyContent: "center",
+            alignItems: "flex-start",
+            width: "100%",
+            paddingHorizontal: 30,
+          }}
+        >
+          <TextInput
+            placeholder="Enter Email Address"
+            style={{
+              width: "100%",
+              borderRadius: 10,
+              backgroundColor: Colors.light,
+              color: Colors.dark,
+              paddingVertical: 10,
+              paddingHorizontal: 20,
+              marginBottom: 10,
+            }}
+          />
+          <TextInput
+            placeholder="Enter Password"
+            secureTextEntry={true}
+            style={{
+              width: "100%",
+              borderRadius: 10,
+              backgroundColor: Colors.light,
+              color: Colors.dark,
+              paddingVertical: 10,
+              paddingHorizontal: 20,
+              marginBottom: 10,
+            }}
+          />
+          <TouchableOpacity
+            style={{
+              width: "100%",
+              backgroundColor: Colors.orange,
+              paddingVertical: 15,
+              paddingHorizontal: 20,
+              borderRadius: 10,
+            }}
+          >
+            <Text
+              style={{
+                color: Colors.dark,
+                fontSize: 14,
+                textAlign: "center",
+              }}
+            >
+              Login
+            </Text>
+          </TouchableOpacity>
         </View>
       </SafeAreaView>
     </ScrollView>
