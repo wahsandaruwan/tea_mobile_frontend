@@ -111,7 +111,7 @@ export default function Fermentation({ navigation }) {
                   borderRadius: 30,
                   marginTop: 10,
                 }}
-                onPress={() => navigation.navigate("InnerNav")}
+                onPress={() => navigation.navigate("FermentationResult")}
               >
                 <Text
                   style={{

@@ -8,7 +8,6 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { StatusBar } from "expo-status-bar";
-import { useState } from "react";
 
 // ---------Third-party components & modules---------
 import * as Icons from "react-native-heroicons/solid";
@@ -17,9 +16,6 @@ import * as Icons from "react-native-heroicons/solid";
 import { Colors, Images } from "../constants";
 
 export default function FermentationTime({ navigation }) {
-  // Fermentation start state
-  const [ferState, setFerState] = useState(false);
-
   return (
     <ScrollView
       contentContainerStyle={{
@@ -77,7 +73,7 @@ export default function FermentationTime({ navigation }) {
               justifyContent: "center",
               alignItems: "center",
               paddingHorizontal: 30,
-              backgroundColor: Colors.secondary,
+              backgroundColor: Colors.dark,
               height: 200,
               width: 200,
               borderRadius: 100,
