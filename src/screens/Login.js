@@ -2,6 +2,7 @@
 import {
   SafeAreaView,
   ScrollView,
+  ImageBackground,
   View,
   Text,
   TextInput,
@@ -29,84 +30,96 @@ export default function Login() {
       <StatusBar style="dark" />
       <SafeAreaView
         style={{
-          display: "flex",
           width: "100%",
+          height: "100%",
           justifyContent: "flex-end",
         }}
       >
-        <View
+        <ImageBackground
+          source={Images.back}
           style={{
-            flexDirection: "row",
+            flex: 1,
+            resizeMode: "cover",
             justifyContent: "center",
             alignItems: "center",
-            marginBottom: 15,
-          }}
-        >
-          <Icons.UserGroupIcon size="45" color={Colors.secondary} />
-          <Text
-            style={{
-              fontSize: 30,
-              color: Colors.secondary,
-              fontWeight: "bold",
-              marginLeft: 5,
-            }}
-          >
-            Login
-          </Text>
-        </View>
-        <View
-          style={{
-            justifyContent: "center",
-            alignItems: "flex-start",
             width: "100%",
-            paddingHorizontal: 30,
+            height: "90%",
           }}
         >
-          <TextInput
-            placeholder="Enter Email Address"
+          <View
             style={{
-              width: "100%",
-              borderRadius: 10,
-              backgroundColor: Colors.light,
-              color: Colors.dark,
-              paddingVertical: 10,
-              paddingHorizontal: 20,
-              marginBottom: 10,
-            }}
-          />
-          <TextInput
-            placeholder="Enter Password"
-            secureTextEntry={true}
-            style={{
-              width: "100%",
-              borderRadius: 10,
-              backgroundColor: Colors.light,
-              color: Colors.dark,
-              paddingVertical: 10,
-              paddingHorizontal: 20,
-              marginBottom: 10,
-            }}
-          />
-          <TouchableOpacity
-            style={{
-              width: "100%",
-              backgroundColor: Colors.orange,
-              paddingVertical: 15,
-              paddingHorizontal: 20,
-              borderRadius: 10,
+              flexDirection: "row",
+              justifyContent: "center",
+              alignItems: "center",
+              marginBottom: 15,
             }}
           >
+            <Icons.UserGroupIcon size="45" color={Colors.secondary} />
             <Text
               style={{
-                color: Colors.dark,
-                fontSize: 14,
-                textAlign: "center",
+                fontSize: 30,
+                color: Colors.secondary,
+                fontWeight: "bold",
+                marginLeft: 5,
               }}
             >
               Login
             </Text>
-          </TouchableOpacity>
-        </View>
+          </View>
+          <View
+            style={{
+              justifyContent: "center",
+              alignItems: "flex-start",
+              width: "100%",
+              paddingHorizontal: 30,
+            }}
+          >
+            <TextInput
+              placeholder="Enter Email Address"
+              style={{
+                width: "100%",
+                borderRadius: 10,
+                backgroundColor: Colors.light,
+                color: Colors.dark,
+                paddingVertical: 10,
+                paddingHorizontal: 20,
+                marginBottom: 10,
+              }}
+            />
+            <TextInput
+              placeholder="Enter Password"
+              secureTextEntry={true}
+              style={{
+                width: "100%",
+                borderRadius: 10,
+                backgroundColor: Colors.light,
+                color: Colors.dark,
+                paddingVertical: 10,
+                paddingHorizontal: 20,
+                marginBottom: 10,
+              }}
+            />
+            <TouchableOpacity
+              style={{
+                width: "100%",
+                backgroundColor: Colors.orange,
+                paddingVertical: 15,
+                paddingHorizontal: 20,
+                borderRadius: 10,
+              }}
+            >
+              <Text
+                style={{
+                  color: Colors.dark,
+                  fontSize: 14,
+                  textAlign: "center",
+                }}
+              >
+                Login
+              </Text>
+            </TouchableOpacity>
+          </View>
+        </ImageBackground>
       </SafeAreaView>
     </ScrollView>
   );

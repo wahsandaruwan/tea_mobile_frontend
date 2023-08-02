@@ -3,7 +3,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 // ---------Custom components & modules---------
-import { Welcome, Login, Register } from "../screens";
+import { Welcome, Login } from "../screens";
 // import InnerNavigation from "./InnerNavigation";
 
 // Create navigation stack

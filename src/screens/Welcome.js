@@ -1,5 +1,11 @@
 // ---------Inbuilt components & modules---------
-import { View, Text, Image, TouchableOpacity, Alert } from "react-native";
+import {
+  View,
+  Text,
+  Image,
+  TouchableOpacity,
+  ImageBackground,
+} from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
 
@@ -10,49 +16,63 @@ export default function Welcome({ navigation }) {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: Colors.ternary }}>
       <StatusBar style="dark" />
-      <View
+      <ImageBackground
+        source={Images.back}
         style={{
-          width: "100%",
           flex: 1,
-          display: "flex",
+          resizeMode: "cover",
           justifyContent: "center",
           alignItems: "center",
-          marginTop: 5,
+          width: "100%",
+          height: "90%",
         }}
       >
         <View
           style={{
+            width: "100%",
+            flex: 1,
             display: "flex",
-            flexDirection: "row",
             justifyContent: "center",
             alignItems: "center",
-            marginBottom: 10,
+            marginTop: 5,
           }}
         >
-          <Image source={Images.logo} style={{ width: 250, height: 100 }} />
-        </View>
-        <View>
-          <TouchableOpacity
+          <View
             style={{
-              paddingVertical: 15,
-              paddingHorizontal: 20,
-              borderRadius: 10,
-              backgroundColor: Colors.orange,
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "center",
+              alignItems: "center",
             }}
-            onPress={() => navigation.navigate("Login")}
           >
-            <Text
+            <Image source={Images.logo} style={{ width: 250, height: 100 }} />
+          </View>
+          <Text style={{ fontSize: 12, color: Colors.dark, marginBottom: 15 }}>
+            Tea Withering and Fermentation Detection.
+          </Text>
+          <View>
+            <TouchableOpacity
               style={{
-                fontSize: 12,
-                textAlign: "center",
-                color: Colors.light,
+                paddingVertical: 15,
+                paddingHorizontal: 20,
+                borderRadius: 10,
+                backgroundColor: Colors.orange,
               }}
+              onPress={() => navigation.navigate("Login")}
             >
-              Get Started
-            </Text>
-          </TouchableOpacity>
+              <Text
+                style={{
+                  fontSize: 12,
+                  textAlign: "center",
+                  color: Colors.light,
+                }}
+              >
+                Get Started
+              </Text>
+            </TouchableOpacity>
+          </View>
         </View>
-      </View>
+      </ImageBackground>
     </SafeAreaView>
   );
 }
