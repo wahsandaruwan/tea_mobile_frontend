@@ -4,7 +4,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 // ---------Custom components & modules---------
 import { Welcome, Login } from "../screens";
-// import InnerNavigation from "./InnerNavigation";
+import InnerNavigation from "./InnerNavigation";
 
 // Create navigation stack
 const Stack = createNativeStackNavigator();
@@ -24,8 +24,7 @@ export default function MainNavigation() {
       >
         <Stack.Screen name="Welcome" component={Welcome} />
         <Stack.Screen name="Login" component={Login} />
-        {/* <Stack.Screen name="Register" component={Register} /> */}
-        {/* <Stack.Screen name="InnerNav" component={InnerNavigation} /> */}
+        <Stack.Screen name="InnerNav" component={InnerNavigation} />
       </Stack.Navigator>
     </NavigationContainer>
   );

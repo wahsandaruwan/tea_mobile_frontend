@@ -16,7 +16,7 @@ import * as Icons from "react-native-heroicons/solid";
 // ---------Constants---------
 import { Colors, Images } from "../constants";
 
-export default function Login() {
+export default function Login({ navigation }) {
   return (
     <ScrollView
       contentContainerStyle={{
@@ -107,6 +107,7 @@ export default function Login() {
                 paddingHorizontal: 20,
                 borderRadius: 10,
               }}
+              onPress={() => navigation.navigate("InnerNav")}
             >
               <Text
                 style={{
