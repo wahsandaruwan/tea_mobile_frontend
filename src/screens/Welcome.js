@@ -55,7 +55,7 @@ export default function Welcome({ navigation }) {
               style={{
                 paddingVertical: 15,
                 paddingHorizontal: 20,
-                borderRadius: 10,
+                borderRadius: 30,
                 backgroundColor: Colors.orange,
               }}
               onPress={() => navigation.navigate("Login")}

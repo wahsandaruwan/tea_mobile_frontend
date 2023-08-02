@@ -58,7 +58,7 @@ export default function Withering({ navigation }) {
                 backgroundColor: Colors.orange,
                 paddingVertical: 15,
                 paddingHorizontal: 30,
-                borderRadius: 10,
+                borderRadius: 30,
               }}
               onPress={() => navigation.navigate("InnerNav")}
             >

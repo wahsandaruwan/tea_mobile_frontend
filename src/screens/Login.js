@@ -78,7 +78,7 @@ export default function Login({ navigation }) {
               placeholder="Enter Email Address"
               style={{
                 width: "100%",
-                borderRadius: 10,
+                borderRadius: 30,
                 backgroundColor: Colors.light,
                 color: Colors.dark,
                 paddingVertical: 10,
@@ -91,7 +91,7 @@ export default function Login({ navigation }) {
               secureTextEntry={true}
               style={{
                 width: "100%",
-                borderRadius: 10,
+                borderRadius: 30,
                 backgroundColor: Colors.light,
                 color: Colors.dark,
                 paddingVertical: 10,
@@ -105,7 +105,7 @@ export default function Login({ navigation }) {
                 backgroundColor: Colors.orange,
                 paddingVertical: 15,
                 paddingHorizontal: 20,
-                borderRadius: 10,
+                borderRadius: 30,
               }}
               onPress={() => navigation.navigate("InnerNav")}
             >
