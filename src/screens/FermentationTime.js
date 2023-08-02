@@ -73,7 +73,7 @@ export default function FermentationTime({ navigation }) {
               justifyContent: "center",
               alignItems: "center",
               paddingHorizontal: 30,
-              backgroundColor: Colors.dark,
+              backgroundColor: Colors.purple,
               height: 200,
               width: 200,
               borderRadius: 100,

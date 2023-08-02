@@ -5,6 +5,7 @@ const Colors = {
   ternary: "#8ef78b",
   light: "#ecf0f1",
   orange: "#FF7613",
+  purple: "#9328a8",
   dark: "#1e272e",
   grey: "#95a5a6",
 };

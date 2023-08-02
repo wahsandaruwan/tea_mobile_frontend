@@ -97,7 +97,41 @@ export default function FermentationResult({ navigation }) {
                 textAlign: "center",
               }}
             >
-              based on additional factors and color
+              based on particular variables.
+            </Text>
+          </View>
+
+          <View
+            style={{
+              justifyContent: "center",
+              alignItems: "center",
+              paddingHorizontal: 30,
+              backgroundColor: Colors.grey,
+              height: 200,
+              width: 200,
+              borderRadius: 100,
+              marginTop: 20,
+            }}
+          >
+            <Text
+              style={{
+                color: Colors.dark,
+                fontSize: 22,
+                fontWeight: "bold",
+                textAlign: "center",
+                marginBottom: 10,
+              }}
+            >
+              100% Fermented
+            </Text>
+            <Text
+              style={{
+                color: Colors.dark,
+                fontSize: 12,
+                textAlign: "center",
+              }}
+            >
+              based on the color of Tea leaves.
             </Text>
           </View>
         </ImageBackground>
