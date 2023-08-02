@@ -21,7 +21,7 @@ export default function BottomNavigation() {
           BottomMenuIcons(route, focused),
         tabBarStyle: {
           height: 70,
-          backgroundColor: Colors.orange,
+          backgroundColor: Colors.primary,
         },
       })}
       initialRouteName="Withering"

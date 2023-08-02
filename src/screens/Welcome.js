@@ -64,7 +64,7 @@ export default function Welcome({ navigation }) {
                 style={{
                   fontSize: 12,
                   textAlign: "center",
-                  color: Colors.light,
+                  color: Colors.dark,
                 }}
               >
                 Get Started
