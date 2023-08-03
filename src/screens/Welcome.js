@@ -56,7 +56,7 @@ export default function Welcome({ navigation }) {
                 paddingVertical: 15,
                 paddingHorizontal: 20,
                 borderRadius: 30,
-                backgroundColor: Colors.orange,
+                backgroundColor: Colors.secondary,
               }}
               onPress={() => navigation.navigate("Login")}
             >
@@ -64,7 +64,7 @@ export default function Welcome({ navigation }) {
                 style={{
                   fontSize: 12,
                   textAlign: "center",
-                  color: Colors.dark,
+                  color: Colors.light,
                 }}
               >
                 Get Started

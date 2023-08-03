@@ -73,7 +73,7 @@ export default function FermentationResult({ navigation }) {
               justifyContent: "center",
               alignItems: "center",
               paddingHorizontal: 30,
-              backgroundColor: Colors.secondary,
+              backgroundColor: Colors.orange,
               height: 200,
               width: 200,
               borderRadius: 100,
@@ -81,7 +81,7 @@ export default function FermentationResult({ navigation }) {
           >
             <Text
               style={{
-                color: Colors.light,
+                color: Colors.dark,
                 fontSize: 22,
                 fontWeight: "bold",
                 textAlign: "center",
@@ -92,7 +92,7 @@ export default function FermentationResult({ navigation }) {
             </Text>
             <Text
               style={{
-                color: Colors.light,
+                color: Colors.dark,
                 fontSize: 12,
                 textAlign: "center",
               }}
@@ -131,7 +131,7 @@ export default function FermentationResult({ navigation }) {
                 textAlign: "center",
               }}
             >
-              based on the color of Tea leaves.
+              based on the color of the sample.
             </Text>
           </View>
         </ImageBackground>

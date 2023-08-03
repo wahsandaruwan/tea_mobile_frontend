@@ -102,7 +102,7 @@ export default function Login({ navigation }) {
             <TouchableOpacity
               style={{
                 width: "100%",
-                backgroundColor: Colors.orange,
+                backgroundColor: Colors.secondary,
                 paddingVertical: 15,
                 paddingHorizontal: 20,
                 borderRadius: 30,
@@ -111,7 +111,7 @@ export default function Login({ navigation }) {
             >
               <Text
                 style={{
-                  color: Colors.dark,
+                  color: Colors.light,
                   fontSize: 14,
                   textAlign: "center",
                 }}

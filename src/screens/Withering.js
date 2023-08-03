@@ -75,18 +75,23 @@ export default function Withering({ navigation }) {
           >
             <TouchableOpacity
               style={{
-                backgroundColor: Colors.orange,
+                backgroundColor: Colors.dark,
                 paddingVertical: 15,
                 paddingHorizontal: 30,
                 borderRadius: 30,
+                flexDirection: "row",
+                justifyContent: "center",
+                alignItems: "center",
               }}
               onPress={() => navigation.navigate("WitheringResult")}
             >
+              <Icons.CameraIcon size="20" color={Colors.light} />
               <Text
                 style={{
-                  color: Colors.dark,
+                  color: Colors.light,
                   fontSize: 14,
                   textAlign: "center",
+                  marginLeft: 5,
                 }}
               >
                 Withering

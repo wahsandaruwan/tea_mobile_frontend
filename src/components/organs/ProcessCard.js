@@ -3,11 +3,15 @@ import { Text, View, TouchableOpacity, Image } from "react-native";
 
 // ---------Third-party components & modules---------
 import * as Icons from "react-native-heroicons/solid";
+import { useNavigation } from "@react-navigation/native";
 
 // ---------Constants---------
 import { Colors, Images } from "../../constants";
 
 export default function ProcessCard() {
+  // Navigation
+  const navigation = useNavigation();
+
   return (
     <View
       style={{
@@ -131,7 +135,7 @@ export default function ProcessCard() {
               borderRadius: 50,
               marginRight: 5,
             }}
-            onPress={() => navigation.navigate("InnerNav")}
+            onPress={() => navigation.navigate("FermentationTime")}
           >
             <Icons.ClockIcon size="15" color={Colors.light} />
           </TouchableOpacity>
@@ -141,7 +145,7 @@ export default function ProcessCard() {
               padding: 8,
               borderRadius: 50,
             }}
-            onPress={() => navigation.navigate("InnerNav")}
+            onPress={() => navigation.navigate("FermentationResult")}
           >
             <Icons.RocketLaunchIcon size="15" color={Colors.light} />
           </TouchableOpacity>
