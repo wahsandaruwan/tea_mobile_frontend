@@ -17,14 +17,13 @@ import { Colors, Images } from "../constants";
 
 export default function Withering({ navigation }) {
   return (
-    <ScrollView
-      contentContainerStyle={{
-        flexGrow: 1,
-        alignItems: "center",
+    <View
+      style={{
         justifyContent: "center",
+        alignItems: "center",
+        width: "100%",
+        backgroundColor: Colors.ternary,
       }}
-      style={{ display: "flex", backgroundColor: Colors.ternary }}
-      showsVerticalScrollIndicator={false}
     >
       <StatusBar style="dark" />
       <SafeAreaView
@@ -43,7 +42,6 @@ export default function Withering({ navigation }) {
             alignItems: "center",
             width: "100%",
             height: "90%",
-            position: "relative",
           }}
         >
           <View
@@ -51,9 +49,7 @@ export default function Withering({ navigation }) {
               width: "100%",
               justifyContent: "center",
               alignItems: "flex-end",
-              position: "absolute",
-              top: "5%",
-              right: 0,
+              marginTop: 30,
             }}
           >
             <TouchableOpacity
@@ -68,13 +64,14 @@ export default function Withering({ navigation }) {
               <Icons.PowerIcon size="20" color={Colors.light} />
             </TouchableOpacity>
           </View>
-          <View
-            style={{
-              justifyContent: "center",
+          <ScrollView
+            contentContainerStyle={{
+              flexGrow: 1,
               alignItems: "center",
-              width: "100%",
-              paddingHorizontal: 30,
+              justifyContent: "center",
             }}
+            style={{ width: "100%" }}
+            showsVerticalScrollIndicator={false}
           >
             <TouchableOpacity
               style={{
@@ -95,9 +92,9 @@ export default function Withering({ navigation }) {
                 Withering
               </Text>
             </TouchableOpacity>
-          </View>
+          </ScrollView>
         </ImageBackground>
       </SafeAreaView>
-    </ScrollView>
+    </View>
   );
 }

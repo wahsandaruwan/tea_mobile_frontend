@@ -17,14 +17,13 @@ import { Colors, Images } from "../constants";
 
 export default function Fermentation({ navigation }) {
   return (
-    <ScrollView
-      contentContainerStyle={{
-        flexGrow: 1,
-        alignItems: "center",
+    <View
+      style={{
         justifyContent: "center",
+        alignItems: "center",
+        width: "100%",
+        backgroundColor: Colors.ternary,
       }}
-      style={{ display: "flex", backgroundColor: Colors.ternary }}
-      showsVerticalScrollIndicator={false}
     >
       <StatusBar style="dark" />
       <SafeAreaView
@@ -43,19 +42,29 @@ export default function Fermentation({ navigation }) {
             alignItems: "center",
             width: "100%",
             height: "90%",
-            position: "relative",
           }}
         >
           <View
             style={{
               width: "100%",
-              justifyContent: "center",
-              alignItems: "flex-end",
-              position: "absolute",
-              top: "5%",
-              right: 0,
+              flexDirection: "row",
+              justifyContent: "flex-end",
+              alignItems: "center",
+              marginTop: 30,
             }}
           >
+            <TouchableOpacity
+              style={{
+                backgroundColor: Colors.dark,
+                padding: 10,
+                borderRadius: 50,
+                marginRight: 10,
+              }}
+              onPress={() => navigation.navigate("InnerNav")}
+            >
+              <Icons.PlusIcon size="20" color={Colors.light} />
+            </TouchableOpacity>
+
             <TouchableOpacity
               style={{
                 backgroundColor: Colors.dark,
@@ -68,13 +77,15 @@ export default function Fermentation({ navigation }) {
               <Icons.PowerIcon size="20" color={Colors.light} />
             </TouchableOpacity>
           </View>
-          <View
-            style={{
-              justifyContent: "center",
+
+          <ScrollView
+            contentContainerStyle={{
+              flexGrow: 1,
               alignItems: "center",
-              width: "100%",
-              paddingHorizontal: 30,
+              justifyContent: "center",
             }}
+            style={{ width: "100%" }}
+            showsVerticalScrollIndicator={false}
           >
             <TouchableOpacity
               style={{
@@ -115,9 +126,9 @@ export default function Fermentation({ navigation }) {
                 Fermentation Value
               </Text>
             </TouchableOpacity>
-          </View>
+          </ScrollView>
         </ImageBackground>
       </SafeAreaView>
-    </ScrollView>
+    </View>
   );
 }
